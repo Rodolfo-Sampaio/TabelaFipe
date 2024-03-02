@@ -41,7 +41,7 @@ public class Principal {
 
         var json = consumo.obterDados(endereco);
         var marcas = conversor.obterLista(json, Dados.class);
-        System.out.printf("| %-16s | %-3s |\n", "Marca", "Código");
+        System.out.printf("\n| %-16s | %-3s |\n", "Marca", "Código");
         System.out.println("+------------------+--------+");
         marcas.stream()
                 .sorted(Comparator.comparing(Dados::getNome))
