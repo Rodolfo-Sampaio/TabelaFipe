@@ -6,7 +6,9 @@ import br.com.alura.TabelaFipe.service.ConsumoApi;
 import br.com.alura.TabelaFipe.service.ConverteDados;
 
 import java.util.Comparator;
+import java.util.List;
 import java.util.Scanner;
+import java.util.stream.Collectors;
 
 public class Principal {
     private Scanner leitura = new Scanner(System.in);
@@ -55,5 +57,15 @@ public class Principal {
         modeloLista.modelos().stream()
                 .sorted(Comparator.comparing(Dados::codigo))
                 .forEach(System.out::println);
+
+        System.out.println("\nDigite um trecho do nome do carro a ser buscado");
+        var nomeVeiculo = leitura.nextLine();
+
+        List<Dados> modelosFiltrados = modeloLista.modelos().stream()
+                .filter(m -> m.nome().toLowerCase().contains(nomeVeiculo.toLowerCase()))
+                .collect(Collectors.toList());
+
+        System.out.println("\nModelos filtrados");
+        modelosFiltrados.forEach(System.out::println);
     }
 }
