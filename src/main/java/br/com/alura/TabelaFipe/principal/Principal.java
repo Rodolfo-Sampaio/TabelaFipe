@@ -21,12 +21,13 @@ public class Principal {
 
     public void exibeMenu() {
         var menu = """
-                *** OPÇÕES ***
-                Carro
-                Moto
-                Caminhão
                 
-                Digite uma das opções para consulta:
+                ************* Consulta Tabela Fip *************
+                
+                OPÇÕES:
+                Carro | Moto | Caminhão
+                
+                Digite uma das opções de veículos para consulta:                
                 """;
 
         System.out.println(menu);
@@ -42,7 +43,6 @@ public class Principal {
         }
 
         var json = consumo.obterDados(endereco);
-        System.out.println(json);
         var marcas = conversor.obterLista(json, Dados.class);
         marcas.stream()
                 .sorted(Comparator.comparing(Dados::codigo))
