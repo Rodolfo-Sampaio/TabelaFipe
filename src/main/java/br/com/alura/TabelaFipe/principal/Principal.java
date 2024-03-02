@@ -48,8 +48,8 @@ public class Principal {
                 .sorted(Comparator.comparing(Dados::codigo))
                 .forEach(System.out::println);
 
-        System.out.println("Informe o código da marca para consulta.");
-        var codigoMarca = leitura.nextInt();
+        System.out.println("\nInforme o código da marca para consulta.");
+        var codigoMarca = leitura.nextLine();
 
         endereco = endereco + "/" + codigoMarca + "/modelos";
         json = consumo.obterDados(endereco);
