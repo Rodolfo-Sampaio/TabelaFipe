@@ -73,8 +73,13 @@ public class Principal {
                 .filter(m -> m.nome().toLowerCase().contains(modeloVeiculo.toLowerCase()))
                 .collect(Collectors.toList());
 
-        System.out.println("\nModelos filtrados");
-        modelosFiltrados.forEach(System.out::println);
+        System.out.printf("\n| %-3s | Modelos filtrados: %-24s |\n","Código","");
+        System.out.println("+--------+---------------------------------------------+");
+        modelosFiltrados.stream()
+                .sorted(Comparator.comparing(Dados::getNome))
+                .forEach(dados -> {
+                    System.out.printf("| %-6s | %-43s | \n", dados.getCodigo(), dados.getNome());
+                });
 
         System.out.println("\nDigite o código do modelo para buscar os valores de avaliação");
         var codigoModelo = leitura.nextLine();
