@@ -66,7 +66,7 @@ public class Principal {
                     System.out.printf("| %-6s | %-43s | \n", dados.getCodigo(), dados.getNome());
                 });
 
-        System.out.println("\nDigite um trecho do nome do carro a ser buscado");
+        System.out.println("\nDigite um trecho do modelo a ser buscado");
         var nomeVeiculo = leitura.nextLine();
 
         List<Dados> modelosFiltrados = modeloLista.modelos().stream()
