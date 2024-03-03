@@ -67,10 +67,10 @@ public class Principal {
                 });
 
         System.out.println("\nDigite um trecho do modelo a ser buscado");
-        var nomeVeiculo = leitura.nextLine();
+        var modeloVeiculo = leitura.nextLine();
 
         List<Dados> modelosFiltrados = modeloLista.modelos().stream()
-                .filter(m -> m.nome().toLowerCase().contains(nomeVeiculo.toLowerCase()))
+                .filter(m -> m.nome().toLowerCase().contains(modeloVeiculo.toLowerCase()))
                 .collect(Collectors.toList());
 
         System.out.println("\nModelos filtrados");
