@@ -81,7 +81,7 @@ public class Principal {
                     System.out.printf("| %-6s | %-43s | \n", dados.getCodigo(), dados.getNome());
                 });
 
-        System.out.println("\nDigite o código do modelo para buscar os valores de avaliação");
+        System.out.println("\nDigite o código do modelo para buscar os valores de avaliação.");
         var codigoModelo = leitura.nextLine();
 
         endereco = endereco + "/" + codigoModelo + "/anos";
@@ -96,7 +96,15 @@ public class Principal {
             veiculos.add(veiculo);
         }
 
-        System.out.println("\nTodos os veículos filtrados com avaliações por ano: ");
-        veiculos.forEach(System.out::println);
+        System.out.printf("\n| %-16s | %-43s | %-4s | %-15s | %-15s |\n", "Marca", "Modelo", "Ano", "Tipo Combustível", "Valor");
+        System.out.println("+------------------+---------------------------------------------+------+------------------+-----------------+");
+        veiculos.stream()
+                .sorted(Comparator.comparing(Veiculo::marca)
+                        .thenComparing(Veiculo::modelo)
+                        .thenComparing(Veiculo::ano).reversed())
+                .forEach(veiculo -> {
+                    System.out.printf("| %-16s | %-43s | %-4s | %-16s | %-15s |\n",
+                            veiculo.marca(), veiculo.modelo(), veiculo.ano(), veiculo.tipoCombustivel(), veiculo.valor());
+                });
     }
 }
