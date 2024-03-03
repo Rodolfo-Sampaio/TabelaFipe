@@ -58,10 +58,13 @@ public class Principal {
 
         Optional<String> nomeDaMarca = conversor.getNomeDaMarcaPorCodigo(marcas, codigoMarca);
 
-        System.out.println("\nModelos da marca: " + nomeDaMarca.get());
+        System.out.printf("\n| %-3s | Modelos da marca: %-25s |\n","Código", nomeDaMarca.get());
+        System.out.println("+--------+---------------------------------------------+");
         modeloLista.modelos().stream()
-                .sorted(Comparator.comparing(Dados::codigo))
-                .forEach(System.out::println);
+                .sorted(Comparator.comparing(Dados::getNome))
+                .forEach(dados -> {
+                    System.out.printf("| %-6s | %-43s | \n", dados.getCodigo(), dados.getNome());
+                });
 
         System.out.println("\nDigite um trecho do nome do carro a ser buscado");
         var nomeVeiculo = leitura.nextLine();
