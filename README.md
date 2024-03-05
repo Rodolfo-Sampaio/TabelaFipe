@@ -1,5 +1,5 @@
 <a href="https://github.com/Rodolfo-Sampaio/TabelaFipe/blob/main/LICENSE"><img src="https://img.shields.io/npm/l/react" alt="NPM" align="right"></a>
-# Sistema Tabela Fipe Console 🚗🏍️🚚
+# Sistema Tabela Fipe Console   🚗🏍️🚚
 
 Permite consultar preços médios de veículos no mercado nacional usando a Tabela Fipe. Lembre-se de que a Tabela Fipe serve apenas como um parâmetro para negociações ou avaliações.
 <br>
@@ -23,15 +23,15 @@ Lembre-se de verificar se todas as dependências estão instaladas corretamente 
 
 ### Como usar a aplicação
 - ###### -> Escolha uma das opções: Carro / Moto / Caminhão
-<img src="https://github.com/Rodolfo-Sampaio/TabelaFipe/assets/96917363/be38f43a-780b-49a8-8537-7953a3ca9e64" style="max-width: 55%; height: auto;">
+<img src="https://github.com/Rodolfo-Sampaio/TabelaFipe/assets/96917363/be38f43a-780b-49a8-8537-7953a3ca9e64" style="max-width: 50%; height: auto;">
 
 - ###### -> Informe o código da marca 
-<img src="https://github.com/Rodolfo-Sampaio/TabelaFipe/assets/96917363/2363dd63-7a28-43c8-b8b4-b752ab4af9be" style="max-width: 35%; height: auto;">
+<img src="https://github.com/Rodolfo-Sampaio/TabelaFipe/assets/96917363/2363dd63-7a28-43c8-b8b4-b752ab4af9be" style="max-width: 31%; height: auto;">
 <br>
-<img src="https://github.com/Rodolfo-Sampaio/TabelaFipe/assets/96917363/f58d104a-534e-41cd-b41b-ffc37a5bc181" style="max-width: 60%; height: auto;">
+<img src="https://github.com/Rodolfo-Sampaio/TabelaFipe/assets/96917363/f58d104a-534e-41cd-b41b-ffc37a5bc181" style="max-width: 54%; height: auto;">
 
 - ###### -> Digite um trecho nome do modelo
-<img src="https://github.com/Rodolfo-Sampaio/TabelaFipe/assets/96917363/d5bffd08-f14b-4964-b5a1-6956cb3499e8" style="max-width: 60%; height: auto;">
+<img src="https://github.com/Rodolfo-Sampaio/TabelaFipe/assets/96917363/d5bffd08-f14b-4964-b5a1-6956cb3499e8" style="max-width: 54%; height: auto;">
 
 - ###### -> Informe o código do modelo
 ![Tf5](https://github.com/Rodolfo-Sampaio/TabelaFipe/assets/96917363/63243efe-7cda-422a-9b3e-791583cd8b3f)
